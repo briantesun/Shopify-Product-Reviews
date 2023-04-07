@@ -1,0 +1,51 @@
+// Set up a work environment to quickly preview changes you make
+
+// Migrate the storefront code you already have to your theme editor
+
+// Get the modal to work properly
+
+// Get the review selector to work properly
+
+// Get the title of the modal to display the name of the product getting reviewed
+
+// Get your code to accept input from the text fields
+
+// Get the leave review button to work
+
+// Connnect your code to firebase
+
+// Get your code to accept input from the rating selector
+
+// Get your code to automatically log the date the review got entered
+
+// Get your code to send the date the review got entered to firebase
+
+// Get your code to send submitted data to a subsection within your database specific to the id of the product getting reviewed
+
+// Get your code to send submitted data to a subsection within your database specific to the store id of the product getting reviewed
+
+// Get your storefront code to fetch data from firebase
+
+// Get your review modules in your storefront to display data from firebase
+
+// Get your code to display a review module for each review from firebase
+
+// Get your code to automatically put newer reviews first in your storefront
+
+// Get your code to display the star rating based on the rating of the review
+
+// Get your code to display a message if the reviewer submits the leave review modal without entering a review
+
+// Get your code to display a message if the reviewer submits the leave review modal without selecting a rating
+
+// Get your code to make the name of the reviewer anonymous if they don't enter a name
+
+// Get your code to have live validation for the rating input section of the leave review modal
+
+// Get your code to have live validation for the review input section of the leave review modal
+
+// Get your code to display a message saying the product has no reviews if the product has no reviews
+
+// Add the success toast
+
+// Stylize your app to match the prototype you made in Figma

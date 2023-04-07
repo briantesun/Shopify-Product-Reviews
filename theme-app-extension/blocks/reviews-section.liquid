@@ -1,0 +1,104 @@
+{{ "main.css" | asset_url | stylesheet_tag }}
+
+<div class="top-section">
+  <div class="container">
+    <h1>Reviews</h1>
+    <a href="#" id="leave-review-modal-open" class="leave-review-button"
+      >Leave review</a
+    >
+  </div>
+</div>
+
+<table class="review-table">
+  <div class="container">
+    <tr>
+      <td>
+        <div class="review-table-star-container">
+          <i class="material-icons review-table-star"> star </i>
+          <i class="material-icons review-table-star"> star </i>
+          <i class="material-icons review-table-star"> star </i>
+          <i class="material-icons review-table-star"> star </i>
+          <i class="material-icons review-table-star"> star </i>
+        </div>
+
+        <p class="review">Best Product Ever! I love it and use it every day</p>
+        <p class="reviewer">By Alex Pan</p>
+        <p class="date-written">Written December 21, 2021</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="review-table-star-container">
+          <i class="material-icons review-table-star"> star </i>
+          <i class="material-icons review-table-star"> star </i>
+          <i class="material-icons review-table-star"> star </i>
+          <i class="material-icons review-table-star"> star </i>
+          <i class="material-icons review-table-star"> star </i>
+        </div>
+
+        <p class="review">So good! I love it. It's amazing</p>
+        <p class="reviewer">By Logan Powder</p>
+        <p class="date-written">Written December 14, 2021</p>
+      </td>
+    </tr>
+  </div>
+</table>
+
+<div id="leave-review-modal-complete" class="leave-review-modal-bg">
+  <div class="leave-review-modal">
+    <div class="leave-review-modal-nav">
+      <div class="leave-review-modal-title">Review Tackle Bag Pro</div>
+      {{ "exit.svg" | asset_url | img_tag: "The Soap Store" }}
+    </div>
+
+    <div class="rating-selector-section">
+      <div class="rating-selector-title">Rating</div>
+      <div class="stars-container">
+        <div class="star">
+          <i class="material-icons"> star </i>
+          <i class="material-icons star-filled"> star </i>
+        </div>
+        <div class="star">
+          <i class="material-icons"> star </i>
+          <i class="material-icons star-filled"> star </i>
+        </div>
+        <div class="star">
+          <i class="material-icons"> star </i>
+          <i class="material-icons star-filled"> star </i>
+        </div>
+        <div class="star">
+          <i class="material-icons"> star </i>
+          <i class="material-icons star-filled"> star </i>
+        </div>
+        <div class="star">
+          <i class="material-icons"> star </i>
+          <i class="material-icons star-filled"> star </i>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-section">
+      <div class="review-section-title">Review</div>
+
+      <textarea
+        name="reviewer"
+        id="reviewer"
+        cols="37"
+        rows="7"
+        class="review-section-input"
+      ></textarea>
+    </div>
+
+    <div class="name-section">
+      <div class="name-section-title">Name (optional)</div>
+
+      <input type="text" class="name-section-input" />
+    </div>
+
+    <button class="leave-review-btn">Leave review</button>
+  </div>
+</div>
+
+<script src="{{ 'main.js' | asset_url }}" async></script>
+
+{% schema %} { "name": "Product reviews", "target": "section" } {% endschema %}

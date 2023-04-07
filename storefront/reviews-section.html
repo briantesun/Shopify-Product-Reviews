@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="top-section">
+      <div class="container">
+        <h1>Reviews</h1>
+        <button
+          id="leave-review-modal-open"
+          class="leave-review-button"
+          type="button"
+        >
+          Leave review
+        </button>
+      </div>
+    </div>
+
+    <table class="review-table">
+      <div class="container">
+        <tr>
+          <td>
+            <div class="review-table-star-container">
+              <i class="material-icons review-table-star"> star </i>
+              <i class="material-icons review-table-star"> star </i>
+              <i class="material-icons review-table-star"> star </i>
+              <i class="material-icons review-table-star"> star </i>
+              <i class="material-icons review-table-star"> star </i>
+            </div>
+
+            <p class="review">
+              Best Product Ever! I love it and use it every day
+            </p>
+            <p class="reviewer">By Alex Pan</p>
+            <p class="date-written">Written December 21, 2021</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="review-table-star-container">
+              <i class="material-icons review-table-star"> star </i>
+              <i class="material-icons review-table-star"> star </i>
+              <i class="material-icons review-table-star"> star </i>
+              <i class="material-icons review-table-star"> star </i>
+              <i class="material-icons review-table-star"> star </i>
+            </div>
+
+            <p class="review">So good! I love it. It's amazing</p>
+            <p class="reviewer">By Logan Powder</p>
+            <p class="date-written">Written December 14, 2021</p>
+          </td>
+        </tr>
+      </div>
+    </table>
+
+    <div id="leave-review-modal-complete" class="leave-review-modal-bg">
+      <div class="leave-review-modal">
+        <div class="leave-review-modal-nav">
+          <div class="leave-review-modal-title">Review Tackle Bag Pro</div>
+          <img
+            src="./images/exit.svg"
+            id="leave-review-modal-exit"
+            class="leave-review-modal-exit"
+            alt="Exit leave review modal"
+          />
+        </div>
+        <form id="leave-review">
+          <div class="rating-selector-section">
+            <div class="rating-selector-title">Rating</div>
+            <div class="stars-container">
+              <div class="star">
+                <i class="material-icons"> star </i>
+                <i class="material-icons star-filled"> star </i>
+              </div>
+              <div class="star">
+                <i class="material-icons"> star </i>
+                <i class="material-icons star-filled"> star </i>
+              </div>
+              <div class="star">
+                <i class="material-icons"> star </i>
+                <i class="material-icons star-filled"> star </i>
+              </div>
+              <div class="star">
+                <i class="material-icons"> star </i>
+                <i class="material-icons star-filled"> star </i>
+              </div>
+              <div class="star">
+                <i class="material-icons"> star </i>
+                <i class="material-icons star-filled"> star </i>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-section">
+            <div class="review-section-title">Review</div>
+
+            <textarea
+              name="reviewer"
+              id="reviewer"
+              cols="37"
+              rows="7"
+              class="review-section-input"
+            ></textarea>
+          </div>
+
+          <div class="name-section">
+            <div class="name-section-title">Name (optional)</div>
+
+            <input type="text" class="name-section-input" />
+          </div>
+
+          <button type="submit" class="leave-review-btn">Leave review</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

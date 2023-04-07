@@ -1,0 +1,108 @@
+<link rel="stylesheet" href="{{ 'reviews.css' | asset_url }}" media="print" onload="this.media='all'">
+
+
+<div class="top-section">
+  <div class="container">
+    <h1>Reviews</h1>
+    <button id="leave-review-modal-open" class="leave-review-button" type="button">
+    Leave review
+</button>
+    
+  </div>
+</div>
+
+<div class="review-table" id="reviews-data"></div>
+
+
+<div id="leave-review-modal-complete" class="leave-review-modal-bg">
+  <div class="leave-review-modal">
+    <div class="leave-review-modal-nav">
+      <div class="leave-review-modal-title">{{ product.title }}</div>     
+      <img src="{{'exit.svg' | asset_url}}"  
+           id="leave-review-modal-exit"
+           class="leave-review-modal-exit"
+           alt="Exit leave review modal"></img>
+    </div>
+    
+    <form id="leave-review-form">
+      <div class="rating-selector-section">
+        <div class="rating-selector-title">Rating</div>
+        <div class="stars-container" id="rating-section-input">
+          <div class="star" id="star1" data-rating-value="1">
+            <i class="material-icons" id="star1Unfilled"> star </i>
+            <i class="material-icons star-filled" id="star1Filled"> star </i>
+          </div>
+          <div class="star" id="star2" data-rating-value="2">
+            <i class="material-icons"> star </i>
+            <i class="material-icons star-filled"> star </i>
+          </div>
+          <div class="star" id="star3" data-rating-value="3">
+            <i class="material-icons"> star </i>
+            <i class="material-icons star-filled"> star </i>
+          </div>
+          <div class="star" id="star4" data-rating-value="4">
+            <i class="material-icons"> star </i>
+            <i class="material-icons star-filled"> star </i>
+          </div>
+          <div class="star" id="star5" data-rating-value="5">
+            <i class="material-icons"> star </i>
+            <i class="material-icons star-filled"> star </i>
+          </div>
+        </div>
+        <div class="rating-section-error" id="rating-section-error">
+          <i class="material-icons">error</i>
+          <div>Rating is required</div>
+        </div>
+      </div>
+
+      <div class="review-section">
+        <div class="review-section-title">Review</div>
+
+        <textarea
+          name="review"
+          cols="37"
+          rows="7"
+          class="review-section-input"
+          id="review-section-input"
+        ></textarea>
+
+        <div class="review-section-error" id="review-section-error">
+          <i class="material-icons">error</i>
+          <div>Review is required</div>
+        </div>
+      </div>
+
+      <div class="name-section">
+        <div class="name-section-title">Name (optional)</div>
+
+        <input type="text" class="name-section-input" id="name-section-input" />
+      </div>
+
+      <button type="submit" class="leave-review-btn" id="leave-review-btn">
+        Leave review
+      </button>
+
+      <p id="rating-value"></p>
+    </form>
+  </div>
+</div>
+
+<script>
+  var productId = "{{product.id}}";
+  var storeId = "{{shop.id }}";
+</script>
+
+<script src="{{'reviews.js' | asset_url}}" defer="defer"></script>
+
+<script src="{{'reviews-fetch.js' | asset_url}}" defer="defer"></script>
+
+
+{% schema %}
+  {
+    "name": "reviews",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
